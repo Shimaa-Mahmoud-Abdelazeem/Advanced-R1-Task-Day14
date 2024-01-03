@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row" >
+    <div >Products Details</div>
+      <div class="col-lg-4 d-flex align-items"  *ngFor="let x of varapi">
+         <div class="card" >
+          <img style="margin: 0 auto;"  width="100px" height="100px" [src]="x.image" alt="{{ x.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ x.title }}</h5>
+            <p class="card-text">{{ x.description }}</p>
+            <p class="card-text">Price: ${{ x.price }}</p>
+            <button class="btn btn-primary mx-4" (click)="addToCart(x)">Add To</button>
+            <button class="btn btn-primary" (click)="showDetails(x)" >Details</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
